@@ -9,7 +9,7 @@
 		$fields = array(
 			//Aqui passamos o APP ID do Eduzz no One Signal,
 			//O eduzz já esta registrado no OneSignal e o número é exatamente este na linha a baixo.
-            'app_id' => "c1361d3a-3c76-44cc-ad48-be0a76b1f22d",
+            'app_id' => "app_id esta no documento com as especificações",
 			/*
 			* O atributo 'included_segments' é usado para enviar push notifications para categorias de usuários
 			* "Active User" esta string é usada para para enviar um push para todos os usuários ativos
@@ -22,6 +22,7 @@
 			* È só passar um array com todos os tokens do onesignal do usuário que se quer enviar o push
 			* Logo é necessário guardar o token do OneSignal, ele será enviado na requisição de login
 			* da mesma forma que é enviado o outro token
+			* este é um player id qualquer, de teste só para mostrar como é feito
 			*/
 			'include_player_ids' => array('8663046a-8d67-410c-b885-129a6821c4c1'),
 			
@@ -53,7 +54,7 @@
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, "https://onesignal.com/api/v1/notifications");
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json; charset=utf-8',
-								  'Authorization: Basic YzEzMGUyYjgtOTMyNS00ZmYxLThiYjUtMWE2MmUyOWI1ODU4'));
+								  'Authorization: esta chave está no documento'));
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 		curl_setopt($ch, CURLOPT_HEADER, FALSE);
 		curl_setopt($ch, CURLOPT_POST, TRUE);
